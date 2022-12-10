@@ -1,0 +1,8 @@
+[
+  {
+    "name": "protobuf",
+    "repo": "https://github.com/protocolbuffers/protobuf.git",
+    "commit": "912850b6f41e74dc3be93b41113bd1c53331241d",
+    "patches": ["protobuf.patch"]
+  }
+]

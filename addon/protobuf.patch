@@ -1,0 +1,26 @@
+diff --git a/src/google/protobuf/compiler/BUILD.bazel b/src/google/protobuf/compiler/BUILD.bazel
+index 8cc1186b0..ab01549e9 100644
+--- a/src/google/protobuf/compiler/BUILD.bazel
++++ b/src/google/protobuf/compiler/BUILD.bazel
+@@ -143,6 +143,21 @@ alias(
+     visibility = ["//visibility:public"],
+ )
+ 
++cc_binary(
++    name = "base",
++    copts = COPTS,
++    deps = [
++        ":code_generator",
++        ":command_line_interface",
++        ":importer",
++        "//src/google/protobuf:protobuf_nowkt",
++        "//src/google/protobuf/compiler/cpp",
++        "//:protobuf",
++    ],
++    linkstatic = True,
++    linkshared = True,
++)
++
+ # Test that the protoc binary is built for the correct architecture.
+ aarch64_test(
+     name = "protoc_aarch64_test",
