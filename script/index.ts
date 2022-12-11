@@ -105,7 +105,7 @@ function addon(debug: boolean, arch: string) {
   }
   process.env.CFLAGS = cflags.join(' ')
   chdir('addon/protobuf')
-  // exec('bazelisk', 'build', '//src/google/protobuf/compiler:base')
+  exec('bazel', 'build', '//src/google/protobuf/compiler:protoc_nowkt', debug && '--compilation_mode=dbg')
   delete process.env.CFLAGS
   chdir('addon')
   exec(npx('node-gyp'), 'rebuild', debug && '--debug', '--arch', arch)
@@ -143,7 +143,7 @@ function run(target: string) {
       ensure('deps.json')
       // chdir('script')
       // exec(npx('ts-node'), 'syntax.ts', '../build')
-      compdb()
+      // compdb()
       break
     case 'build':
       bundle(false)

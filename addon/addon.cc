@@ -1,3 +1,4 @@
+#include "google/protobuf/descriptor.h"
 #include "google/protobuf/descriptor.pb.h"
 #include "napi.h"
 
@@ -17,8 +18,8 @@ private:
   auto Analyze(const Napi::CallbackInfo &info) -> Napi::Value {
     auto env = info.Env();
 
-    /* google::protobuf::compiler::CommandLineInterface cli; */
-    // google::protobuf::FileDescriptorProto file;
+    google::protobuf::FileDescriptorProto file_descriptor_proto;
+    google::protobuf::SourceLocation source_loc;
 
     return env.Null();
   }
