@@ -105,8 +105,7 @@ function addon(debug: boolean, arch: string) {
   }
   process.env.CFLAGS = cflags.join(' ')
   chdir('addon/protobuf')
-  // TODO(#8): gn static libs are always built with release config for now
-  exec('bazelisk', 'build', '//src/google/protobuf/compiler:base')
+  // exec('bazelisk', 'build', '//src/google/protobuf/compiler:base')
   delete process.env.CFLAGS
   chdir('addon')
   exec(npx('node-gyp'), 'rebuild', debug && '--debug', '--arch', arch)
@@ -147,7 +146,7 @@ function run(target: string) {
       compdb()
       break
     case 'build':
-      // bundle(false)
+      bundle(false)
       if (os.platform() == 'darwin') {
         addon(false, 'x64')
         addon(false, 'arm64')
