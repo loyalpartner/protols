@@ -143,7 +143,7 @@ function run(target: string) {
       ensure('deps.json')
       // chdir('script')
       // exec(npx('ts-node'), 'syntax.ts', '../build')
-      // compdb()
+      compdb()
       break
     case 'build':
       bundle(false)

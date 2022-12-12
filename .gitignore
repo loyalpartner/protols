@@ -1,6 +1,6 @@
 node_modules
-server/addon/protobuf
-build
+server/addon/protobuf/
+build/
 lib
 compile_commands.json
 .cache

@@ -19,7 +19,7 @@
       '<(rootdir)/protobuf/third_party/abseil-cpp',
     ],
     'libraries': [
-      '<(rootdir)/protobuf/bazel-bin/src/google/protobuf/compiler/libprotoc_nowkt<(SHARED_LIB_SUFFIX)',
+      '<(rootdir)/protobuf/bazel-bin/src/google/protobuf/compiler/libprotoc_nowkt.so',
     ],
     'cflags_cc': [
       '-std=c++17',

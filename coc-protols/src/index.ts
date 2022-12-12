@@ -1,8 +1,7 @@
-import {services, ExtensionContext, LanguageClient, workspace, ServerOptions, TransportKind} from 'coc.nvim';
-import * as path from 'path';
+import {services, ExtensionContext, LanguageClient, workspace, ServerOptions, TransportKind} from 'coc.nvim'
 
 export async function activate(context: ExtensionContext): Promise<void> {
-	const executable = context.asAbsolutePath(path.join('build', 'server.js'));
+  const executable = context.asAbsolutePath('node_modules/protols/lib/server.js')
 
 	const config = workspace.getConfiguration('gn');
 	const client = new LanguageClient(
@@ -24,5 +23,5 @@ export async function activate(context: ExtensionContext): Promise<void> {
 		}
 	);
 
-	context.subscriptions.push(services.registLanguageClient(client));
+  context.subscriptions.push(services.registLanguageClient(client))
 }
