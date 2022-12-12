@@ -55,26 +55,5 @@
     "singleQuote": true,
     "jsxSingleQuote": true,
     "bracketSpacing": false
-  },
-  "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "protobuf configuration",
-      "properties": {
-        "protobuf.enabled": {
-          "type": "boolean",
-          "default": true,
-          "description": "Enable coc-protobuf extension"
-        },
-        "protobuf.execArgv": {
-          "type": "array",
-          "default": [],
-          "description": "Extra arguments for node which start language server.",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    }
   }
 }

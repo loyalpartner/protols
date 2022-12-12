@@ -28,4 +28,4 @@ function config(file) {
   }
 }
 
-export default ['index', 'server'].map(config)
+export default ['server'].map(config)

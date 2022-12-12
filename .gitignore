@@ -1,5 +1,5 @@
 node_modules
-addon/protobuf
+server/addon/protobuf
 build
 lib
 compile_commands.json
