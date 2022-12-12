@@ -14,7 +14,7 @@ function config(file) {
   return {
     input: path.join('src', `${file}.ts`),
     output: {
-      file: path.join('build', `${file}.js`),
+      file: path.join('lib', `${file}.js`),
       format: 'commonjs',
       sourcemap: true,
     },

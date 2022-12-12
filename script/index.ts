@@ -109,7 +109,7 @@ function addon(debug: boolean, arch: string) {
   delete process.env.CFLAGS
   chdir('addon')
   exec(npx('node-gyp'), 'rebuild', debug && '--debug', '--arch', arch)
-  copy(`build/${debug ? 'Debug' : 'Release'}/addon.node`, `../build/${os.platform()}-${arch}.node`)
+  copy(`build/${debug ? 'Debug' : 'Release'}/addon.node`, `../lib/${os.platform()}-${arch}.node`)
 }
 
 function compdb() {

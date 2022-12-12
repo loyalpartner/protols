@@ -1,6 +1,7 @@
 node_modules
 addon/protobuf
 build
+lib
 compile_commands.json
 .cache
 *.log

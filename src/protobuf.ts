@@ -48,7 +48,7 @@ export interface DocumentSymbol {
   children?: DocumentSymbol[]
 }
 
-const module = `../build/${os.platform()}-${os.arch()}.node`
+const module = `../lib/${os.platform()}-${os.arch()}.node`
 const addon = require(module) // eslint-disable-line @typescript-eslint/no-var-requires
 export const update = addon.update as (file: string, content: string) => void
 // export const close = addon.close as (file: string) => void
